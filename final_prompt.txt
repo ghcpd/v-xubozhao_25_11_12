@@ -1,0 +1,44 @@
+### 🧰 Task Description
+You are maintaining a Python project that uses outdated or deprecated dependencies.  
+Your task is to **analyze**, **upgrade**, and **validate** the dependency environment.
+
+The current setup may trigger warnings or fail due to obsolete versions.  
+You need to ensure compatibility and reproducibility across the upgrade process.
+
+---
+
+### 🎯 Objectives
+1. Identify obsolete or insecure dependencies.  
+2. Automatically upgrade them to the latest compatible versions.  
+3. Update all dependency references in the project (including imports if needed).  
+4. Ensure all tests pass after upgrade using **pytest**.  
+5. Generate a version diff report comparing old and new dependencies.  
+6. Make the process fully reproducible with scripts and environment setup.
+7. Upon task completion, the console displays the start and end times from the commencement of requirements through to completion. 
+
+---
+
+### 📂 Input Files
+- `requirements_old.txt` — contains outdated dependencies.  
+- `app.py` — a small demo script using those old libraries.  
+
+---
+
+### ✅ Expected Deliverables
+The model should generate:
+
+1. **`requirements.txt`** — Updated dependency list after upgrade.  
+2. **`setup.sh`** — Script to install dependencies and prepare the environment.  
+3. **`run_tests.sh`** — Script to execute all tests and generate a coverage report.  
+4. **`test_app.py`** — Pytest test cases verifying both:
+   - Application still runs correctly after dependency upgrade.
+   - New dependency versions are properly installed and functional.  
+5. **Upgrade Report (diff)** — Log or markdown summary comparing version changes. 
+
+---
+
+### 🧪 Testing Requirements
+- All tests should be written using **pytest** syntax.  
+- Include both **functional tests** (app logic) and **environment tests** (dependency versions).  
+- Test scripts must be executable via:
+  pytest -v
